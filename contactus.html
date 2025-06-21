@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - BANANAGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffce5;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ffee00;
+      padding: 20px 30px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #000;
+    }
+
+    header img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #4A3F21;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-weight: 800;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #000;
+      color: #fff;
+      outline: none;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 800px;
+      margin: 40px auto 80px;
+      padding: 30px 40px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    main h2 {
+      color: #4A3F21;
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 320px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .social-btn {
+      background-color: transparent;
+      color: #4A3F21;
+      border: 2px solid #4A3F21;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .social-btn i {
+      font-size: 1.4rem;
+    }
+
+    .social-btn:hover,
+    .social-btn:focus {
+      background-color: #ffee00;
+      color: #4A3F21;
+      border-color: #ffee00;
+      outline: none;
+      box-shadow: 0 4px 12px rgba(238, 238, 0, 0.5);
+    }
+
+    footer {
+      background-color: #ffee00;
+      padding: 30px 20px;
+      color: #4A3F21;
+      border-top: 2px solid #000;
+      text-align: center;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      main {
+        margin: 20px 15px 80px;
+        padding: 25px 20px;
+      }
+
+      .social-buttons {
+        gap: 15px;
+      }
+
+      .social-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="banana_icon.jpg" alt="Logo Pisang BANANAGO" />
+      <h1>BANANAGO</h1>
+    </div>
+    <nav role="navigation" aria-label="Menu Utama">
+      <a href="homepage.html">HOME</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="menu.html">MENU</a>
+      <a href="testimoni.html">TESTIMONI</a>
+      <a href="contactus.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+
+    <div class="map-container" aria-label="Peta lokasi BANANAGO">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.054373842009!2d104.02104157477723!3d1.1212422988680155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9890001f5387f%3A0x33de90e6eec30913!2sBanana%20Go!5e0!3m2!1sen!2sid!4v1748177897486!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Peta lokasi BANANAGO"
+      ></iframe>
+    </div>
+
+    <div class="btn-group" aria-label="Tautan media sosial dan pemesanan">
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/bananago.batam?igsh=OGRjcG80eTlkY3Bu&utm_source=qr" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram BANANAGO">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a href="https://kirimwa.id/bananago" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp BANANAGO">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a href="https://www.tiktok.com/@bananago.batam?_t=ZS-8wDa0RBM1Ug&_r=1" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok BANANAGO">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+
+        <a href="https://r.grab.com/g/2-1-6-C6U1PCC3PCJ3RE" target="_blank" rel="noopener" class="social-btn" aria-label="Order Now BANANAGO">
+          <i class="fas fa-shopping-bag"></i> Order Now
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BANANAGO. All rights reserved.
+  </footer>
+
+</body>
+</html>

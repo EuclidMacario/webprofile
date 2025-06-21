@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - BANANAGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    /* INHERIT DARI KODE NAVBAR DAN FOOTER */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffce5;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffee00;
+      padding: 20px 30px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #000;
+    }
+
+    header img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #4A3F21;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-weight: 800;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #000;
+      color: #fff;
+      outline: none;
+    }
+
+    footer {
+      background-color: #ffee00;
+      padding: 40px 20px;
+      color: #4A3F21;
+      border-top: 2px solid #000;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+    }
+
+    .footer-social, .footer-contact {
+      flex: 1;
+      min-width: 280px;
+      padding: 10px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .social-item img {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-item img:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-contact p {
+      margin: 8px 0;
+    }
+
+    footer > p:last-child {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+
+    /* SECTION MENU */
+    .menu-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .menu-title {
+      text-align: center;
+      font-size: 32px;
+      color: #4A3F21;
+      margin-bottom: 40px;
+      font-weight: 800;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-card {
+      background-color: #fff;
+      border: 2px solid #4A3F21;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+
+    .menu-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .menu-card h3 {
+      font-size: 20px;
+      color: #4A3F21;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .menu-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .menu-card .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="banana_icon.jpg" alt="Logo Pisang BANANAGO" />
+      <h1>BANANAGO</h1>
+    </div>
+    <nav role="navigation" aria-label="Menu Utama">
+      <a href="homepage.html">HOME</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="menu.html">MENU</a>
+      <a href="testimoni.html">TESTIMONI</a>
+      <a href="contactus.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <!-- SECTION MENU -->
+  <section class="menu-section">
+    <h2 class="menu-title">MENU BANANAGO</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="piscoklumer.jpg" alt="Piscok Lumer" />
+        <h3>Piscok Lumer</h3>
+        <p>Pisang coklat meleleh dengan balutan kulit lumpia renyah.</p>
+        <p class="price">Rp 27.000</p>
+      </div>
+      <div class="menu-card">
+        <img src="kejuaroma.jpg" alt="Keju Aroma" />
+        <h3>Keju Aroma</h3>
+        <p>Keju lembut dan gurih dalam balutan kulit krispi.</p>
+        <p class="price">Rp 26.000</p>
+      </div>
+      <div class="menu-card">
+        <img src="pisdut.jpg" alt="Pisang Gendut" />
+        <h3>Pisang Gendut</h3>
+        <p>Pisang padat isi, ditambah topping coklat dan keju.</p>
+        <p class="price">Rp 25.000</p>
+      </div>
+      <div class="menu-card">
+        <img src="ximilu.jpg" alt="Combo Box" />
+        <h3>Ximilu</h3>
+        <p>Dessert segar khas Taiwan dengan campuran buah dan susu.</p>
+        <p class="price">Rp 35.000</p>
+      </div>
+       <div class="menu-card">
+        <img src="bananamilk.jpg" alt="Combo Box" />
+        <h3>Banana Milk</h3>
+        <p>Minuman segar rasa pisang, cocok dinikmati dingin.</p>
+        <p class="price">Rp 25.000</p>
+      </div>
+       <div class="menu-card">
+        <img src="semangka.jpg" alt="Combo Box" />
+        <h3>Sparkling Watermelon</h3>
+        <p>Sensasi segar semangka berpadu dengan gelembung Sprite yang bikin meledak di mulut!</p>
+        <p class="price">Rp 30.000</p>
+      </div>
+       <div class="menu-card">
+        <img src="piscok_keju.jpg" alt="Combo Box" />
+        <h3>Pisang Coklat Keju</h3>
+        <p>Pisang keju dengan coklat lumer yang renyah dan enak.</p>
+        <p class="price">Rp 28.500</p>
+      </div>
+       <div class="menu-card">
+        <img src="combo1.jpg" alt="Combo Box" />
+        <h3>Combo Box</h3>
+        <p>Isi 2 varian favorit dalam satu box praktis dan hemat.</p>
+        <p class="price">Rp 45.900</p>
+      </div>
+       <div class="menu-card">
+        <img src="pisanggendut.jpg" alt="Combo Box" />
+        <h3>Pisang Nugget</h3>
+        <p>Potongan pisang lembut yang digoreng renyah dan ditaburi topping manis favoritmu!</p>
+        <p class="price">Rp 25.000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-social">
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+          <a href="https://www.instagram.com/bananago.batam?igsh=OGRjcG80eTlkY3Bu&utm_source=qr" target="_blank">
+            <span>@bananago</span>
+          </a>
+        </div>
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+          <a href="https://www.tiktok.com/@bananago.batam?_t=ZS-8wDa0RBM1Ug&_r=1" target="_blank">
+            <span>@bananago</span>
+          </a>
+        </div>
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+          <a href="https://kirimwa.id/bananago" target="_blank">
+            <span>0813 6247 1750</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <p><strong>Lokasi:</strong> Batam</p>
+        <p><strong>Pesan sekarang via WhatsApp:</strong> 0813 6247 1750</p>
+        <p><strong>Jangan sampai kehabisan!</strong></p>
+        <p>Piscok Lumer, camilan favorit semua kalangan 🍌</p>
+      </div>
+    </div>
+    <p>&copy; 2025 BANANAGO. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

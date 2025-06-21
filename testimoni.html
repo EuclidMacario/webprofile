@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BANANAGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset CSS dan pengaturan font dasar */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffce5;
+      color: #333;
+    }
+
+    /* ===== HEADER / NAVBAR ===== */
+    header {
+      background-color: #ffee00;
+      padding: 20px 30px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #000;
+    }
+
+    header img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #4A3F21;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-weight: 800;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #000;
+      color: #fff;
+      outline: none;
+    }
+
+    /* ===== SLIDER TESTIMONI ===== */
+    main.slider-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      animation: fade 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 20px);
+      padding: 15px;
+      min-width: 280px;
+      max-width: 32%;
+    }
+
+    .avatar img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .meta {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .meta span {
+      font-weight: normal;
+      color: gray;
+      font-size: 0.9em;
+      display: block;
+    }
+
+    .stars {
+      color: #ffcc00;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    /* ===== TOMBOL SLIDE KIRI KANAN ===== */
+    .nav-buttons {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+  .nav-buttons button {
+  font-family: 'Poppins', sans-serif; /* Tambahkan baris ini */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+    .nav-buttons button:hover {
+      background-color: #333;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #ffee00;
+      padding: 40px 20px;
+      color: #4A3F21;
+      border-top: 2px solid #000;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+    }
+
+    .footer-social, .footer-contact {
+      flex: 1;
+      min-width: 280px;
+      padding: 10px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .social-item img {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-item img:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-contact p {
+      margin: 8px 0;
+    }
+
+    footer > p:last-child {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="banana_icon.jpg" alt="Logo Pisang BANANAGO" />
+      <h1>BANANAGO</h1>
+    </div>
+    <nav role="navigation" aria-label="Menu Utama">
+  <a href="homepage.html">HOME</a>
+  <a href="aboutus.html">ABOUT US</a>
+  <a href="menu.html">MENU</a>
+  <a href="testimoni.html">TESTIMONI</a>
+  <a href="contactus.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <!-- ===== TESTIMONI / SLIDER ===== -->
+  <main class="slider-container">
+    <!-- SLIDE 1 -->
+    <div class="slide active">
+       <div class="card"><div class="avatar"><img src="orang.jpg" alt="Charli"></div><div class="meta">Charli <span>20 menit lalu</span></div><div class="stars">★★★★★</div><p>Baru coba sekali, langsung ketagihan!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Kim Jong Un"></div><div class="meta">Kim Jong Un <span>20 menit lalu</span></div><div class="stars">★★★★★</div><p>Manisnya pas, cocok buat cemilan sore!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Christian"></div><div class="meta">Christian <span>20 menit lalu</span></div><div class="stars">★★★★★</div><p>Pisang gorengnya enak banget, garing luar, lembut dalam!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Asep"></div><div class="meta">Asep <span>19 menit lalu</span></div><div class="stars">★★★★★</div><p>Pas banget buat teman ngopi sore!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Dimas"></div><div class="meta">Dimas <span>18 menit lalu</span></div><div class="stars">★★★★★</div><p>Pisangnya manis alami, nggak bikin eneg!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Budi"></div><div class="meta">Budi <span>17 menit lalu</span></div><div class="stars">★★★★★</div><p>Pertama kali coba langsung jatuh cinta!</p></div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+   <div class="card"><div class="avatar"><img src="orang.jpg" alt="Setiawan"></div><div class="meta">Setiawan <span>16 menit lalu</span></div><div class="stars">★★★★★</div><p>Kulitnya renyah banget di luar, tapi pisangnya lembut di dalam.</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Agus"></div><div class="meta">Agus <span>15 menit lalu</span></div><div class="stars">★★★★★</div><p>Produk pisang goreng ini memiliki kualitas yang sangat baik!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Restu"></div><div class="meta">Restu <span>14 menit lalu</span></div><div class="stars">★★★★★</div><p>OMG pisang gorengnya juara! Crispy-nya dapet, manisnya pas.</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Wulan"></div><div class="meta">Wulan <span>13 menit lalu</span></div><div class="stars">★★★★★</div><p>Suka banget sama porsinya juga, banyak dan murah!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Bayu"></div><div class="meta">Bayu <span>12 menit lalu</span></div><div class="stars">★★★★★</div><p>Cocok buat jualan lagi, repeat order deh pokoknya!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Tari"></div><div class="meta">Tari <span>11 menit lalu</span></div><div class="stars">★★★★★</div><p>Pelayanan cepat dan ramah, produk sampai hangat!</p></div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Dewi"></div><div class="meta">Dewi <span>10 menit lalu</span></div><div class="stars">★★★★★</div><p>Anak-anak juga suka banget! Aman buat keluarga.</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Rendi"></div><div class="meta">Rendi <span>9 menit lalu</span></div><div class="stars">★★★★★</div><p>Gurih dan manisnya pas, recommended banget!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Sinta"></div><div class="meta">Sinta <span>8 menit lalu</span></div><div class="stars">★★★★★</div><p>Teksturnya lembut banget di mulut!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Yoga"></div><div class="meta">Yoga <span>7 menit lalu</span></div><div class="stars">★★★★★</div><p>Pengiriman cepat dan rapi, pisang goreng masih renyah!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Eka"></div><div class="meta">Eka <span>6 menit lalu</span></div><div class="stars">★★★★★</div><p>Rasanya bikin balik lagi terus!</p></div>
+  <div class="card"><div class="avatar"><img src="orang.jpg" alt="Tono"></div><div class="meta">Tono <span>5 menit lalu</span></div><div class="stars">★★★★★</div><p>Jajanan terbaik selama bulan ini!</p></div>
+    </div>
+
+    <!-- TOMBOL SLIDE -->
+    <div class="nav-buttons">
+      <button onclick="prevSlide()">← BACK</button>
+      <button onclick="nextSlide()">NEXT →</button>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-social">
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+          <a href="https://www.instagram.com/bananago.batam" target="_blank"><span>@bananago</span></a>
+        </div>
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+          <a href="https://www.tiktok.com/@bananago.batam" target="_blank"><span>@bananago</span></a>
+        </div>
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+          <a href="https://kirimwa.id/bananago" target="_blank"><span>0813 6247 1750</span></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p><strong>Lokasi:</strong> Batam</p>
+        <p><strong>Pesan sekarang via WhatsApp:</strong> 0813 6247 1750</p>
+        <p><strong>Jangan sampai kehabisan!</strong></p>
+        <p>Piscok Lumer, camilan favorit semua kalangan 🍌</p>
+      </div>
+    </div>
+    <p>&copy; 2025 BANANAGO. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== SCRIPT UNTUK SLIDER ===== -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  </script>
+
+</body>
+</html>
